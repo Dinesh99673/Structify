@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Header/>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/Structify/" element={<Home />} />
             <Route path="/linked-list" element={<LinkedList />} /> 
           </Routes>
         <Footer/>

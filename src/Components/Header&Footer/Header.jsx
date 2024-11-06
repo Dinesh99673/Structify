@@ -12,10 +12,10 @@ function Header() {
 
             {/* Desktop Menu */}
             <nav className="hidden md:flex space-x-6 text-cyan-300">
-                <Link to="/" className="hover:text-orange-500">Data Structures</Link>
-                <Link to="/" className="hover:text-orange-500">About</Link>
-                <Link to="/" className="hover:text-orange-500">Resources</Link>
-                <Link to="/" className="hover:text-orange-500">Contact</Link>
+                <Link to="/Structify/" className="hover:text-orange-500">Data Structures</Link>
+                <Link to="/Structify/" className="hover:text-orange-500">About</Link>
+                <Link to="/Structify/" className="hover:text-orange-500">Resources</Link>
+                <Link to="/Structify/" className="hover:text-orange-500">Contact</Link>
             </nav>
 
             {/* Mobile Menu Icon */}
@@ -26,10 +26,10 @@ function Header() {
             {/* Mobile Dropdown Menu */}
             {menuOpen && (
                 <nav className="absolute top-16 right-0 bg-gray-800 p-5 w-48 rounded-lg shadow-lg text-cyan-300 md:hidden flex flex-col space-y-4">
-                    <Link to="/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Data Structures</Link>
-                    <Link to="/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>About</Link>
-                    <Link to="/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Resources</Link>
-                    <Link to="/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Contact</Link>
+                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Data Structures</Link>
+                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>About</Link>
+                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Resources</Link>
+                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Contact</Link>
                 </nav>
             )}
         </header>

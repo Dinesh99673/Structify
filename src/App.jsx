@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {  BrowserRouter as Router,Route, Routes } from 'react-router-dom';
+import {  HashRouter as Router,Route, Routes } from 'react-router-dom';
 import Home from "./Components/Home.jsx";
 import LinkedList from './Components/LinkedList/LinkedList.jsx';
 import Header from './Components/Header&Footer/Header.jsx';
@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Header/>
           <Routes>
-            <Route path="/Structify/" element={<Home />} />
+            <Route exact path="/Structify/" element={<Home />} />
             <Route path="/Structify/linked-list" element={<LinkedList />} /> 
           </Routes>
         <Footer/>

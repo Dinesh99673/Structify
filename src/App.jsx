@@ -4,16 +4,18 @@ import Home from "./Components/Home.jsx";
 import LinkedList from './Components/LinkedList/LinkedList.jsx';
 import Header from './Components/Header&Footer/Header.jsx';
 import Footer from './Components/Header&Footer/Footer.jsx';
+import ParticlesComponent from './Components/Design/BackgoundParticles.jsx';
 
 function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-cyan-300 flex flex-col items-center relative">
+      <ParticlesComponent id='Particles'/>
       <Router>
         <Header/>
           <Routes>
             <Route path="/Structify/" element={<Home />} />
-            <Route path="/linked-list" element={<LinkedList />} /> 
+            <Route path="/Structify/linked-list" element={<LinkedList />} /> 
           </Routes>
         <Footer/>
       </Router>

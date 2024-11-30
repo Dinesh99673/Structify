@@ -1,36 +1,64 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi"; // Icons for the menu
+import { FiMenu, FiX } from "react-icons/fi";
 
 function Header() {
-    const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="w-full flex items-center justify-between p-5 bg-gray-800 shadow-lg z-10">
+        <header className="fixed top-2 left-0 right-0 w-[80%] h-12 mx-auto bg-gray-900 text-white rounded-full shadow-lg z-50 flex items-center justify-between px-6">
             {/* Logo */}
-            <div className="text-orange-500 text-3xl font-bold">Structify</div>
+            <div className="text-white text-2xl font-bold">Structify</div>
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex space-x-6 text-cyan-300">
-                <Link to="/Structify/" className="hover:text-orange-500">Data Structures</Link>
-                <Link to="/Structify/" className="hover:text-orange-500">About</Link>
-                <Link to="/Structify/" className="hover:text-orange-500">Resources</Link>
-                <Link to="/Structify/" className="hover:text-orange-500">Contact</Link>
+            <nav className="hidden md:flex space-x-6">
+                <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">Data Structures</Link>
+                <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">About</Link>
+                <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">Resources</Link>
+                <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">Contact</Link>
             </nav>
 
             {/* Mobile Menu Icon */}
-            <div className="md:hidden text-cyan-300 cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+            <button
+                aria-label="Toggle Menu"
+                className="md:hidden text-white focus:outline-none"
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
                 {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-            </div>
+            </button>
 
             {/* Mobile Dropdown Menu */}
             {menuOpen && (
-                <nav className="absolute top-16 right-0 bg-gray-800 p-5 w-48 rounded-lg shadow-lg text-cyan-300 md:hidden flex flex-col space-y-4">
-                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Data Structures</Link>
-                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>About</Link>
-                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Resources</Link>
-                    <Link to="/Structify/" className="hover:text-orange-500" onClick={() => setMenuOpen(false)}>Contact</Link>
-                </nav>
+                <div className="absolute top-full right-0 mt-2 bg-gray-900 p-5 w-48 rounded-lg shadow-lg text-white md:hidden flex flex-col space-y-4">
+                    <Link
+                        to="/Structify/"
+                        className="hover:text-orange-400 text-gray-300 transition"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Data Structures
+                    </Link>
+                    <Link
+                        to="/Structify/"
+                        className="hover:text-orange-400 text-gray-300 transition"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        About
+                    </Link>
+                    <Link
+                        to="/Structify/"
+                        className="hover:text-orange-400 text-gray-300 transition"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Resources
+                    </Link>
+                    <Link
+                        to="/Structify/"
+                        className="hover:text-orange-400 text-gray-300 transition"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Contact
+                    </Link>
+                </div>
             )}
         </header>
     );

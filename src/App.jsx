@@ -14,8 +14,9 @@ function App() {
       <Router>
         <Header/>
           <Routes>
-            <Route exact path="/Structify/" element={<Home />} />
+            <Route path="/Structify/" element={<Home />} />
             <Route path="/Structify/linked-list" element={<LinkedList />} /> 
+            <Route path="*" element={<Home />} />
           </Routes>
         <Footer/>
       </Router>

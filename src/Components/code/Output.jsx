@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Button, Text, useToast } from "@chakra-ui/react";
 import { executeCode } from "../Services/api";
 
-const Output = ({ editorRef, language }) => {
+const Output = ({ isOutputView, language,value, isMobile, handleBackToEditor}) => {
   const toast = useToast();
   const [output, setOutput] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const runCode = async () => {
-    const sourceCode = editorRef.current.getValue();
+
+  const runCode = async () => {    
+    const sourceCode = value;
     if (!sourceCode) return;
     try {
       setIsLoading(true);
@@ -30,7 +31,7 @@ const Output = ({ editorRef, language }) => {
   };
 
   return (
-    <Box w="50%">
+    <Box w={isMobile?"100%":"50%"}>
       <Text mb={2} fontSize="lg">
         Output
       </Text>
@@ -43,8 +44,18 @@ const Output = ({ editorRef, language }) => {
       >
         Run Code
       </Button>
+      <Button
+              mb={4}
+              ml={2}
+              onClick={handleBackToEditor}
+              variant="outline"
+              colorScheme="blue"
+              display={{base:'inline',md:"none"}}
+            >
+              Back to Editor
+            </Button>
       <Box
-        height="75vh"
+        height="80vh"
         p={2}
         color={isError ? "red.400" : ""}
         border="1px solid"

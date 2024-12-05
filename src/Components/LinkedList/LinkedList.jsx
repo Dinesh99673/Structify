@@ -17,7 +17,7 @@ const LinkedList = () => {
     };
 
     return (
-<div className="p-10 text-[#E0E0E0] flex flex-col lg:flex-row gap-10 items-start z-10 mt-10">
+<div className="p-10 max-w-full text-[#E0E0E0] flex flex-col lg:flex-row gap-10 items-start z-10 mt-10">
     {/* Text Content */}
     <div className="flex-1 justify-center w-full lg:w-[60%]">
         <h1 className="text-btn-lnk text-5xl font-bold font-serif text-center lg:text-start ">Linked List</h1>
@@ -44,6 +44,84 @@ const LinkedList = () => {
             <li><span className="text-xl font-semibold text-pri-text">No Contiguous Memory Requirement : </span>Nodes can be scattered throughout memory, as they are connected by pointers, not physically stored together. </li>
         </ul>
 
+        <h2 className="text-title text-2xl font-bold mt-6">Applications and Real-World Examples of Linked List</h2>
+        <ul className="list-disc ml-5 mt-2 text-lg text-sec-text md:text-xl" >
+            <li><span className="text-xl font-semibold text-pri-text">Music Playlist:</span> In music players, a playlist is often represented as a linked list where each song is a node, and the next song is linked to it. The music player can easily traverse through songs, go to the next, or previous song by following the links.</li>
+            <li><span className="text-xl font-semibold text-pri-text">Navigation Systems:</span> Linked lists are used in GPS navigation systems to store and access routes, where each destination is linked to the next, allowing for efficient navigation.</li>
+            <li><span className="text-xl font-semibold text-pri-text">Memory Management:</span> In memory management systems, free memory blocks can be managed as a linked list, allowing efficient allocation and deallocation of memory.</li>
+            <li><span className="text-xl font-semibold text-pri-text">Browser History:</span> Browser history is often implemented as a doubly linked list, where each page visited is a node, and the next and previous pages are easily accessible.</li>
+            <li><span className="text-xl font-semibold text-pri-text">Undo/Redo Operations:</span> Many applications (e.g., word processors) use linked lists to manage undo and redo operations. Each operation is stored as a node, and the user can traverse the history to undo or redo actions.</li>
+        </ul>
+
+        <div className="overflow-x-auto md:max-w-2xl max-w-md mx-auto  my-8 rounded-xl">
+            <table className="w-full border-collapse border-gray-400 shadow-lg text-heading">
+                <thead>
+                <tr className="bg-cyan-500 text-white">
+                    <th className="px-6 py-3 text-left font-bold text-lg" colSpan="5">Linked List Operations and Time Complexity</th>
+                </tr>
+                <tr className="bg-cyan-400 text-white">
+                    <th className="px-4 py-2 text-left font-semibold">Operation</th>
+                    <th className="px-4 py-2 text-center font-semibold">Singly</th>
+                    <th className="px-4 py-2 text-center font-semibold">Singly Circular</th>
+                    <th className="px-4 py-2 text-center font-semibold">Doubly</th>
+                    <th className="px-4 py-2 text-center font-semibold">Doubly Circular</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr className="border-t border-gray-500 bg-gray-50 hover:bg-gray-100">
+                    <td className="px-4 py-3 font-medium text-gray-800">Insert at Beginning</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                </tr>
+                <tr className="border-t border-gray-500 bg-white hover:bg-gray-100">
+                    <td className="px-4 py-3 font-medium text-gray-800">Insert at End</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                </tr>
+                <tr className="border-t border-gray-500 bg-gray-50 hover:bg-gray-100">
+                    <td className="px-4 py-3 font-medium text-gray-800">Insert at Middle</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                </tr>
+                <tr className="border-t border-gray-500 bg-white hover:bg-gray-100">
+                    <td className="px-4 py-3 font-medium text-gray-800">Delete at Beginning</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                </tr>
+                <tr className="border-t border-gray-500 bg-gray-50 hover:bg-gray-100">
+                    <td className="px-4 py-3 font-medium text-gray-800">Delete at End</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(1)</td>
+                </tr>
+                <tr className="border-t border-gray-500 bg-white hover:bg-gray-100">
+                    <td className="px-4 py-3 font-medium text-gray-800">Search</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                </tr>
+                <tr className="border-t border-gray-500 bg-gray-50 hover:bg-gray-100">
+                    <td className="px-4 py-3 font-medium text-gray-800">Reverse</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                    <td className="px-4 py-3 text-center">O(n)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
         <h2 className="text-title text-2xl font-bold mt-6">Types of Linked List</h2>
         <ul className="list-disc ml-5 mt-2 text-lg text-sec-text md:text-xl" >
             <li><span className="text-xl font-semibold text-pri-text">Singly Linked List :</span>  Each node contains data and a pointer to the next node in the list. It can only be traversed in one direction, from the head to the end.</li>
@@ -60,46 +138,6 @@ const LinkedList = () => {
             />
         </div>
 
-        <div className='hidden lg:block w-full mt-10 '>
-        <div className="flex flex-row justify-center gap-10 mt-6">
-            <div>
-        <h2 className="text-title text-3xl font-bold mt-6">Insertion in Singly Linked List</h2>
-            <img 
-                src={LL_insertion_flow} 
-                alt="Linked List Insertion Flowchart" 
-                className="w-full max-w-md lg:max-w-2xl bg-black rounded-lg object-contain mt-[10px] mb-6" 
-            />
-            </div>
-            <div>
-        <h2 className="text-title text-3xl font-bold mt-6">Deletion in Singly Linked List</h2>
-            <img 
-                src={LLDeletion} 
-                alt="Linked List Insertion Flowchart" 
-                className="w-full max-w-md lg:max-w-2xl bg-black rounded-lg object-contain mt-[10px] mb-6" 
-            />
-            </div>
-        </div>
-    </div>
-
-    <div className="block lg:hidden md:mt-10 w-full items-center">
-        <h2 className="text-title text-2xl font-bold text-center">Insertion in Singly Linked List</h2>
-        <div className="flex flex-col justify-center mt-6 ">
-            <img 
-                src={LL_insertion_flow} 
-                alt="Linked List Insertion Flowchart Mobile" 
-                className="w-full items-center bg-black rounded-lg object-contain mt-[10px] mb-6" 
-            />
-            <h2 className="text-title text-2xl font-bold text-center">Deletion in Singly Linked List</h2>
-            <img 
-                src={LLDeletion} 
-                alt="Linked List Insertion Flowchart Mobile" 
-                className="w-full items-center bg-black rounded-lg object-contain mt-[10px] mb-6" 
-            />
-            <p className="text-gray-400 text-center text-lg">
-                The flowchart provides a step-by-step visualization of how insertion and Deletion in a singly linked list works.
-            </p>
-        </div>
-    </div>        
         <h2 className="text-cyan-400 font-bold text-2xl mt-6">Types of Linked Lists</h2>
         <div className="mt-6 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 w-full max-w-xl">
             <button onClick={() => setChoice(0)} className="px-4 py-2 bg-btn-lnk rounded-lg hover:bg-cyan-400 text-[#121212] w-full md:w-auto font-semibold">Singly Linked List</button>
@@ -112,7 +150,7 @@ const LinkedList = () => {
         {Choice === 2 && <DoublyLLBlock />}
         {Choice === 3 && <DoublyCircularLLBlock />}
 
-        <Box minH='100vh' bg="#0f0a19" color="gray.500" px={4} py={8}>
+        <Box minH='100vh' bg="#0f0a19" color="gray.500" px={2} py={8}>
             <CodeEditor/>
         </Box>
     </div>

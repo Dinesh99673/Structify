@@ -12,7 +12,7 @@ import {
   const languages = Object.entries(LANGUAGE_VERSIONS);
   const ACTIVE_COLOR = "blue.400";
   
-  const LanguageSelector = ({ language, onSelect }) => {
+  const LanguageSelector = ({ language, onSelect,handleRunCode }) => {
     return (
       <Box ml={2} mb={4}>
         <Text mb={2} fontSize="lg">
@@ -41,6 +41,15 @@ import {
             ))}
           </MenuList>
         </Menu>
+        <Button
+              onClick={handleRunCode}
+              variant="outline"
+              display={{base:'inline',md:"none"}}
+              colorScheme="green"
+              ml={2}
+            >
+              Run Code
+            </Button>
       </Box>
     );
   };

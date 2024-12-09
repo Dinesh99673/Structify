@@ -16,7 +16,7 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             { name: 'Linked List', description: 'Visualize and perform operations on linked lists.', link: '/Structify/linked-list' },
-                            { name: 'Stack', description: 'Explore stack operations and see how LIFO works.', link: '/Structify/' },
+                            { name: 'Stack', description: 'Explore stack operations and see how LIFO works.', link: '/Structify/stack' },
                             { name: 'Queue', description: 'Simulate queue processes and learn about FIFO.', link: '/Structify/' },
                             { name: 'Binary Tree', description: 'Understand tree traversal and node manipulation.', link: '/Structify/' }
                         ].map((structure) => (

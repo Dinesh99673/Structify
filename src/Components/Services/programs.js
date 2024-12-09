@@ -1,0 +1,6 @@
+const LinkedListProgram = {
+    singlyLL:[
+        ``,
+        ``
+    ],
+}

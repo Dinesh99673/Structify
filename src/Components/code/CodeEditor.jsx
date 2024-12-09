@@ -8,13 +8,12 @@ import Output from "./Output";
 const CodeEditor = () => {
   const editorRef = useRef();
   const [value, setValue] = useState("");
-  const [language, setLanguage] = useState("javascript");
+  const [language, setLanguage] = useState("cpp");
   const [isOutputView, setIsOutputView] = useState(false); // Tracks current view
   const [isMobile] = useMediaQuery("(max-width: 768px)"); // Detects mobile screens
 
   const onMount = (editor) => {
     editorRef.current = editor;
-    editor.focus();
   };
 
   useEffect(()=>{
@@ -54,7 +53,7 @@ const CodeEditor = () => {
               }}
               height="75vh"
               theme="vs-dark"
-              language={language}
+              language={language=="gcc"?'c':language}
               defaultValue={CODE_SNIPPETS[language]}
               onMount={onMount}
               value={value}
@@ -67,7 +66,7 @@ const CodeEditor = () => {
         <HStack spacing={4}>
           {/* Desktop layout: Editor and Output side by side */}
           <Box w="50%">
-            <LanguageSelector language={language} onSelect={onSelect} />
+            <LanguageSelector language={language=="gcc"?'c':language} onSelect={onSelect} />
             <Editor
               options={{
                 minimap: {

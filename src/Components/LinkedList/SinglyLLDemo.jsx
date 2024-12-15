@@ -30,7 +30,7 @@ const LinkedListBlock = () => {
     };
 
     return (
-        <div className="p-4 md:p-10 text-cyan-300 flex flex-col items-center">
+        <div className="p-4 md:p-4 text-cyan-300 flex flex-col items-center">
             <h1 className="text-title text-2xl md:text-4xl font-bold font-serif text-center">Singly Linked List Visualizer</h1>
             
             {/* Input and Buttons */}

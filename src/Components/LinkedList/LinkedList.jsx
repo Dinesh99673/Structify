@@ -16,7 +16,7 @@ const LinkedList = () => {
     };
 
     return (
-<div className="p-10 max-w-full text-[#E0E0E0] flex flex-col lg:flex-row gap-10 items-start z-10 mt-10">
+<div className="p-10 max-w-full text-[#E0E0E0] flex flex-col lg:flex-row gap-10 items-start z-10 mt-10 text-justify">
     {/* Text Content */}
     <div className="flex-1 justify-center w-full lg:w-[60%]">
         <h1 className="text-btn-lnk text-5xl font-bold font-serif text-center lg:text-start ">{LinkedListData.title}</h1>
@@ -37,40 +37,29 @@ const LinkedList = () => {
             ))}
         </ul>
 
-        <h2 className="text-title text-2xl font-bold mt-6">Types of Linked List</h2>
-        <ul className="list-disc ml-5 mt-2 text-lg text-sec-text md:text-xl" >
-        {LinkedListData.types.map((data,index)=>(
-            <li key={index}><span className="text-xl font-semibold text-pri-text">{data[0]} :</span> {data[1]}</li>
-            ))}
-        </ul>
+        {/*All Theory part is being displayed by this Fragment */}
+        {
+            LinkedListData.subContent.map((data,index)=>(
+                <React.Fragment key={index}>
+                    <h2 className="text-title text-2xl font-bold mt-6">{data.title}</h2>
+                    <ul className="list-disc ml-5 mt-2 text-lg text-sec-text md:text-xl" >
+                        {
+                            data.content.map((item,index)=>(
+                                <li key={index}><span className="text-xl font-semibold text-pri-text">{item[0]} :</span> {item[1]}</li>
+                            ))
+                        }
+                    </ul>
+                </React.Fragment>
+            ))
+        }
 
-        <h2 className="text-title text-2xl font-bold mt-6">Applications and Real-World Examples of Linked List</h2>
-        <ul className="list-disc ml-5 mt-2 text-lg text-sec-text md:text-xl" >
-        {LinkedListData.applications.map((data,index)=>(
-            <li key={index}><span className="text-xl font-semibold text-pri-text">{data[0]} :</span> {data[1]}</li>
-            ))}
-        </ul>
-
-        <h2 className="text-title text-2xl font-bold mt-6">Advantages of Linked List</h2>
-        <ul className="list-disc ml-5 mt-2 text-lg text-sec-text md:text-xl" >
-        {LinkedListData.advantages.map((data,index)=>(
-            <li key={index}><span className="text-xl font-semibold text-pri-text">{data[0]} :</span> {data[1]}</li>
-            ))}
-        </ul>
-
-        <h2 className="text-title text-2xl font-bold mt-6">Disadvantages of Linked Lists</h2>
-        <ul className="list-disc ml-5 mt-2 text-lg text-sec-text md:text-xl" >
-        {LinkedListData.drawbacks.map((data,index)=>(
-            <li key={index}><span className="text-xl font-semibold text-pri-text">{data[0]} :</span> {data[1]}</li>
-            ))}
-        </ul>
 
         <div className="overflow-x-auto w-full mx-auto  my-8 flex flex-col lg:flex-row gap-5">
             <div className='lg:w-[50%] w-full text-xs lg:text-lg '>
                 <table className="w-full border-collapse border-gray-400 shadow-lg text-heading overflow-hidden rounded-xl">
                     <thead>
                         <tr className="bg-cyan-500 text-white">
-                            <th className="px-6 py-3 text-left text-center font-bold text-md md:text-lg" colSpan="5">Linked List Operations and Time Complexity</th>
+                            <th className="px-6 py-3  text-center font-bold text-md md:text-lg" colSpan="5">Linked List Operations and Time Complexity</th>
                         </tr>
                         <tr className="bg-cyan-400 text-white">
                             <th className="px-4 py-2 text-left font-semibold">Operation</th>
@@ -141,28 +130,7 @@ const LinkedList = () => {
                 />
             </div>
         </div>
-
-
-
-
-        <h2 className="text-cyan-400 font-bold text-2xl mt-6">Types of Linked Lists</h2>
-        <div className="mt-6 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 w-full max-w-xl">
-            <button onClick={() => setChoice(0)} className="px-4 py-2 bg-btn-lnk rounded-lg hover:bg-cyan-400 text-[#121212] w-full md:w-auto font-semibold">Singly Linked List</button>
-            <button onClick={() => setChoice(1)} className="px-4 py-2 bg-btn-lnk rounded-lg hover:bg-cyan-400 text-[#121212] w-full md:w-auto font-semibold">Singly Circular Linked List</button>
-            <button onClick={() => setChoice(2)} className="px-4 py-2 bg-btn-lnk rounded-lg hover:bg-cyan-400 text-[#121212] w-full md:w-auto font-semibold">Doubly Linked List</button>
-            <button onClick={() => setChoice(3)} className="px-4 py-2 bg-btn-lnk rounded-lg hover:bg-cyan-400 text-[#121212] w-full md:w-auto font-semibold">Double Circular Linked List</button>
-        </div>
-        {Choice === 0 && <LinkedListBlock />}
-        {Choice === 1 && <CircularLLBlock />}
-        {Choice === 2 && <DoublyLLBlock />}
-        {Choice === 3 && <DoublyCircularLLBlock />}
-
-        <Box minH='100vh' bg="#0f0a19" color="gray.500" px={2} py={8}>
-            <CodeEditor/>
-        </Box>
     </div>
-
-
 </div>
 
     );

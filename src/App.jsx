@@ -6,6 +6,10 @@ import Header from './Components/Header&Footer/Header.jsx';
 import Footer from './Components/Header&Footer/Footer.jsx';
 import ParticlesComponent from './Components/Design/BackgoundParticles.jsx';
 import Stack from './Components/Stack/Stack.jsx';
+import LinkedListVisualizer from './Components/Visualizer/LinkedListVisualizer.jsx';
+import StackVisulaizer from './Components/Visualizer/StackVisualizer.jsx';
+import Queue from './Components/Queue/Queue.jsx';
+import QueueVisulaizer from './Components/Visualizer/QueueVisualizer.jsx';
 
 function App() {
 
@@ -17,7 +21,11 @@ function App() {
           <Routes>
             <Route path="/Structify/" element={<Home />} />
             <Route path="/Structify/linked-list" element={<LinkedList />} /> 
-            <Route path="/Structify/stack" element={<Stack />} /> 
+            <Route path="/Structify/stack" element={<Stack />} />
+            <Route path="/Structify/queue" element={<Queue />} />
+            <Route path="/Structify/LinkedListVisualizer" element={<LinkedListVisualizer />} />
+            <Route path="/Structify/StackVisualizer" element={<StackVisulaizer />} />
+            <Route path="/Structify/QueueVisualizer" element={<QueueVisulaizer />} />
             <Route path="*" element={<Home />} />
           </Routes>
         <Footer/>

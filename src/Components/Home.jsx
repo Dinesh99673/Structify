@@ -15,10 +15,10 @@ const Home = () => {
                     <h2 className="text-[#F5F5F5] text-3xl font-semibold mb-8">Explore Data Structures</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            { name: 'Linked List', description: 'Visualize and perform operations on linked lists.', link: '/Structify/linked-list' },
-                            { name: 'Stack', description: 'Explore stack operations and see how LIFO works.', link: '/Structify/stack' },
-                            { name: 'Queue', description: 'Simulate queue processes and learn about FIFO.', link: '/Structify/' },
-                            { name: 'Binary Tree', description: 'Understand tree traversal and node manipulation.', link: '/Structify/' }
+                            { name: 'Linked List', description: 'Visualize and perform operations on linked lists.', link1: '/Structify/linked-list', link2: '/Structify/LinkedListVisualizer' },
+                            { name: 'Stack', description: 'Explore stack operations and see how LIFO works.', link1: '/Structify/stack', link2: '/Structify/StackVisualizer' },
+                            { name: 'Queue', description: 'Simulate queue processes and learn about FIFO.', link1: '/Structify/queue', link2: '/Structify/QueueVisualizer' },
+                            { name: 'Binary Tree', description: 'Understand tree traversal and node manipulation.', link1: '/Structify/', link2: '/Structify/' }
                         ].map((structure) => (
                             <div
                                 key={structure.name}
@@ -27,7 +27,10 @@ const Home = () => {
                                 <h3 className="text-pri-text text-2xl font-bold">{structure.name}</h3>
                                 <p className="text-gray-300 mt-2">{structure.description}</p>
                                 <button className="mt-4 px-4 py-2 bg-btn-lnk text-deep-black font-semibold rounded-md hover:bg-hover-state">
-                                    <Link to={structure.link} className='text-gray-950'>Learn More</Link>
+                                    <Link to={structure.link1} className='text-gray-950'>Learn More</Link>
+                                </button>
+                                <button className="mt-4 ml-2 px-4 py-2 bg-btn-lnk text-deep-black font-semibold rounded-md hover:bg-hover-state">
+                                    <Link to={structure.link2} className='text-gray-950'>Visualizer</Link>
                                 </button>
                             </div>
                         ))}

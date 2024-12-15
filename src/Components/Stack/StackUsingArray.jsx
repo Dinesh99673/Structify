@@ -52,7 +52,7 @@ const StackUsingArray = () =>{
 
 
     return (
-        <div className="p-4 md:p-10 text-cyan-300 flex flex-col items-center">
+        <div className="p-4 md:p-4 text-cyan-300 flex flex-col items-center">
             <h1 className="text-title text-2xl md:text-4xl font-bold font-serif text-center">Stack using Array Visualizer</h1>
             <h4 className="text-red-600 text-lg md:text-lg font-serif text-center">Maximum size of Stack is 10</h4>
             
@@ -71,8 +71,8 @@ const StackUsingArray = () =>{
             </div>
 
             {/* Stack Using Array Display */}
-            <div className="flex flex-col place-items-center justify-center mt-10 gap-0 md:gap-0 max-w-full">
-            <h4 className="text-red-600 text-lg md:text-lg font-serif text-center">{length==stackSize&&"Empty Stack"}</h4>
+            <div className="flex flex-col place-items-center justify-center mt-8 gap-0 md:gap-0 max-w-full">
+            <h4 className="text-red-600 text-lg md:text-lg font-serif text-center mb-3">{length==stackSize&&"Empty Stack"}</h4>
                 {list.map((node, index) => (
                     <React.Fragment key={index}>
                         {length==index?

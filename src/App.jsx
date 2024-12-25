@@ -10,12 +10,14 @@ import LinkedListVisualizer from './Components/Visualizer/LinkedListVisualizer.j
 import StackVisulaizer from './Components/Visualizer/StackVisualizer.jsx';
 import Queue from './Components/Queue/Queue.jsx';
 import QueueVisulaizer from './Components/Visualizer/QueueVisualizer.jsx';
+import BinaryTree from './Components/BinaryTree/BinaryTree.jsx';
+import BinaryTreeVisualizer from './Components/Visualizer/BinaryTreeVisualizer.jsx';
 
 function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-cyan-300 flex flex-col items-center relative">
-      <ParticlesComponent id='Particles'/>
+      <ParticlesComponent/>
       <Router>
         <Header/>
           <Routes>
@@ -23,9 +25,11 @@ function App() {
             <Route path="/Structify/linked-list" element={<LinkedList />} /> 
             <Route path="/Structify/stack" element={<Stack />} />
             <Route path="/Structify/queue" element={<Queue />} />
+            <Route path="/Structify/binary-tree" element={<BinaryTree />} />
             <Route path="/Structify/LinkedListVisualizer" element={<LinkedListVisualizer />} />
             <Route path="/Structify/StackVisualizer" element={<StackVisulaizer />} />
             <Route path="/Structify/QueueVisualizer" element={<QueueVisulaizer />} />
+            <Route path="/Structify/BinaryTreeVisualizer" element={<BinaryTreeVisualizer />} />
             <Route path="*" element={<Home />} />
           </Routes>
         <Footer/>

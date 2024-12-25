@@ -170,4 +170,64 @@ const QueueData = {
     ],
 };
 
-export {LinkedListData,StackData,QueueData};
+const BinaryTreeData = {
+    title: "Binary Tree",
+    overview: "A Binary Tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child. It is widely used in computer science for various operations like searching, sorting, and hierarchical organization of data.",
+    subContent: [
+        {
+            title: "Key Features of a Binary Tree",
+            content: [
+                ["Hierarchical Structure", "Data is organized in a hierarchical manner with parent-child relationships."],
+                ["Maximum of Two Children", "Each node in a binary tree can have at most two children, commonly referred to as the left and right children."],
+                ["Recursion-Friendly", "Binary trees are naturally recursive, as each subtree of a binary tree is itself a binary tree."],
+                ["Dynamic Structure", "Binary trees can grow or shrink dynamically, making them suitable for applications where the number of elements varies over time."],
+                ["Efficient Searching", "Binary trees, especially binary search trees, provide efficient searching with an average time complexity of O(log n)."],
+                ["Diverse Variants", "Binary trees have several types, including complete, full, balanced, and skewed trees, tailored for specific use cases."]
+            ]
+        },
+        {
+            title: "Types of Binary Trees",
+            content: [
+                ["Full Binary Tree", "A binary tree in which every node has either 0 or 2 children."],
+                ["Complete Binary Tree", "A binary tree in which all levels, except possibly the last, are completely filled, and all nodes are as left as possible."],
+                ["Perfect Binary Tree", "A binary tree in which all internal nodes have two children, and all leaf nodes are at the same level."],
+                ["Balanced Binary Tree", "A binary tree in which the height of the left and right subtrees of any node differ by at most 1."],
+                ["Skewed Binary Tree", "A binary tree in which all nodes have only one child, resulting in a structure similar to a linked list. Can be left-skewed or right-skewed."],
+                ["Binary Search Tree (BST)", "A binary tree with the property that the value of each node is greater than all values in its left subtree and less than all values in its right subtree."]
+            ]
+        },
+        {
+            title: "Applications and Real-World Examples of Binary Tree",
+            content: [
+                ["Hierarchical Data Representation", "Used to represent hierarchical structures such as organization charts, file systems, and XML/HTML parsing."],
+                ["Searching and Sorting", "Binary Search Trees (BSTs) are used for efficient searching and sorting operations."],
+                ["Expression Evaluation", "Used to represent and evaluate expressions in compilers and interpreters (Expression Trees)."],
+                ["Routing Algorithms", "Used in network routing algorithms and decision-making processes."],
+                ["Data Compression", "Huffman coding, a compression algorithm, relies on binary trees for encoding and decoding data."],
+                ["Gaming and AI", "Used in game trees for decision-making and in artificial intelligence for hierarchical modeling."]
+            ]
+        },
+        {
+            title: "Advantages of Binary Tree",
+            content: [
+                ["Efficient Searching", "Binary Search Trees provide logarithmic search time in average cases."],
+                ["Hierarchical Representation", "Ideal for representing hierarchical data structures such as directories and organizational charts."],
+                ["Dynamic Data Storage", "Binary trees can dynamically grow and shrink as needed."],
+                ["Balanced Variants", "Balanced binary trees like AVL trees and Red-Black trees ensure optimal performance for searching and insertion."],
+                ["Flexibility", "Supports various operations such as insertion, deletion, and traversal (in-order, pre-order, post-order)."]
+            ]
+        },
+        {
+            title: "Disadvantages of Binary Tree",
+            content: [
+                ["Unbalanced Trees", "If the tree becomes unbalanced, the time complexity for search, insertion, and deletion can degrade to O(n)."],
+                ["Complex Implementation", "Requires more effort to implement than linear data structures like arrays or linked lists."],
+                ["Overhead", "Additional memory is needed to store pointers for each node."],
+                ["Limited Children", "Each node can only have up to two children, which may not be sufficient for certain applications."],
+                ["Traversal Challenges", "Traversing the tree in specific orders (e.g., level-order traversal) can be more complex compared to other data structures."]
+            ]
+        }
+    ]
+};
+
+export {LinkedListData,StackData,QueueData,BinaryTreeData};

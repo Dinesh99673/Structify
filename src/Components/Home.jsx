@@ -18,7 +18,7 @@ const Home = () => {
                             { name: 'Linked List', description: 'Visualize and perform operations on linked lists.', link1: '/Structify/linked-list', link2: '/Structify/LinkedListVisualizer' },
                             { name: 'Stack', description: 'Explore stack operations and see how LIFO works.', link1: '/Structify/stack', link2: '/Structify/StackVisualizer' },
                             { name: 'Queue', description: 'Simulate queue processes and learn about FIFO.', link1: '/Structify/queue', link2: '/Structify/QueueVisualizer' },
-                            { name: 'Binary Tree', description: 'Understand tree traversal and node manipulation.', link1: '/Structify/', link2: '/Structify/' }
+                            { name: 'Binary Tree', description: 'Understand tree traversal and node manipulation.', link1: '/Structify/binary-tree', link2: '/Structify/BinaryTreeVisualizer' }
                         ].map((structure) => (
                             <div
                                 key={structure.name}

@@ -13,9 +13,6 @@ function Header() {
             {/* Desktop Menu */}
             <nav className="hidden md:flex space-x-6">
                 <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">Data Structures</Link>
-                <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">About</Link>
-                <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">Resources</Link>
-                <Link to="/Structify/" className="hover:text-orange-400 text-gray-300 transition">Contact</Link>
             </nav>
 
             {/* Mobile Menu Icon */}
@@ -36,27 +33,6 @@ function Header() {
                         onClick={() => setMenuOpen(false)}
                     >
                         Data Structures
-                    </Link>
-                    <Link
-                        to="/Structify/"
-                        className="hover:text-orange-400 text-gray-300 transition"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        About
-                    </Link>
-                    <Link
-                        to="/Structify/"
-                        className="hover:text-orange-400 text-gray-300 transition"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        Resources
-                    </Link>
-                    <Link
-                        to="/Structify/"
-                        className="hover:text-orange-400 text-gray-300 transition"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        Contact
                     </Link>
                 </div>
             )}
